@@ -1,0 +1,50 @@
+<div class="containere">
+<h1>Select With Game a game to edit</h1>
+<select #Selectid>
+    <option *ngFor="let game of games"> {{ game.game_id}}: {{ game.game_name }}</option>
+</select>
+<br>
+<br>
+<p>Game Name:
+<input matInput #gamen ng-model="game">
+</p>
+<br>
+<p> Game Publisher: 
+    <select #gamepub>
+        <option *ngFor="let gamep of Publisher">{{gamep.game_publisher_id}}: {{gamep.game_publisher_name}}</option>
+    </select>
+</p>
+<br>
+<p> Game developer: 
+    <select #gamedev>
+        <option *ngFor="let gamed of Developer">{{gamed.game_developerid}}: {{gamed.game_developername}}</option>
+    </select>
+</p>
+<br>
+<p> Game devies: 
+    <select #gamedevi>
+        <option *ngFor="let gamedevi of Devies">{{gamedevi.devices_id}}: {{gamedevi.devices_name}}</option>
+    </select>
+</p>
+<br>
+<p> Game genre: 
+    <select #gamegen>
+        <option *ngFor="let gameg of Genre">{{gameg.genre_id}}: {{gameg.genre_name}}</option>
+    </select> 
+</p>
+<br>
+<p> Game PEGI: 
+    <select #gamep>
+        <option *ngFor="let gamep of PEGI">{{gamep.PEGI_id}}: {{gamep.PEGI_rating}}</option>
+    </select>
+</p>
+<br>Releas date
+<p> 
+<input type="date" #dato placeholder="Dato">
+</p>
+<br>
+<br>
+<div>
+    <button (click)="Select(Selectid.value,gamen.value,gamepub.value,gamedev.value,gamedevi.value,gamegen.value,gamep.value,dato.value)">Select</button>
+</div>
+</div>

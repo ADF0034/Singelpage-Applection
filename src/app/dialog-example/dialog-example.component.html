@@ -1,0 +1,42 @@
+<div class="containeri">
+    <h1>Add Game</h1>
+<input matInput #gamen placeholder="Spilnavn">
+<br>
+<p> Game Publisher: 
+    <select #gamepub>
+        <option *ngFor="let gamep of Publisher">{{gamep.game_publisher_id}}: {{gamep.game_publisher_name}}</option>
+    </select>
+</p>
+<br>
+<p> Game developer: 
+    <select #gamedev>
+        <option *ngFor="let gamed of Developer">{{gamed.game_developerid}}: {{gamed.game_developername}}</option>
+    </select>
+</p>
+<br>
+<p> Game devies: 
+    <select #gamedevi>
+        <option *ngFor="let gamedevi of Devies">{{gamedevi.devices_id}}: {{gamedevi.devices_name}}</option>
+    </select>
+</p>
+<br>
+<p> Game genre: 
+    <select #gamegen>
+        <option *ngFor="let gameg of Genre">{{gameg.genre_id}}: {{gameg.genre_name}}</option>
+    </select> 
+</p>
+<br>
+<p> Game PEGI: 
+    <select #gamep>
+        <option *ngFor="let gamep of PEGI">{{gamep.PEGI_id}}: {{gamep.PEGI_rating}}</option>
+    </select>
+</p>
+<br>
+<p>
+<input type="date" #dato placeholder="Dato">
+</p>
+<br>
+<div>
+<button (click)="tjek(gamen.value,gamepub.value,gamedev.value,gamedevi.value,gamegen.value,gamep.value,dato.value)">gem</button>
+</div>
+</div>

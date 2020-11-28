@@ -1,0 +1,14 @@
+<ul *ngIf="games">
+    <li  class="con" *ngFor="let game of games">
+      <p class="country" #gameid > id: {{game.game_id}}</p>
+      <p class="country" id="Gamename" >Name: {{ game.game_name }}</p>
+      <p class="country" id="Gamepegi">Pegi: {{ game.PEGI }}</p>
+      <p class="country" id="">Developer: {{ game.game_developer }}</p>
+      <p class="country" id="GamePublisher">Publisher: {{ game.game_publisher }}</p>
+      <p class="country" id="GameGenre">Genre: {{ game.genre }}</p>
+      <p class="country" id="GamePlatform">Platform: {{ game.platform }}</p>
+      <p class="country" id="GameReleast">Releast: {{ game.release_date }}</p>
+      <p class="country" id="Gamedevices">Devices: {{ game.devices }}</p>
+    </li>
+  </ul>
+

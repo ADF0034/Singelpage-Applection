@@ -1,0 +1,9 @@
+<h1>Deleat game</h1>
+<p> 
+    <select #gamedeleat>
+        <option *ngFor="let game of games">{{game.game_id}}: {{ game.game_name }}</option>
+    </select> 
+    <br>
+    <br>
+    <button (click)="Deleatgame(gamedeleat.value)"> select </button>
+</p>

@@ -1,0 +1,22 @@
+/*select{
+    width: 100%;
+    size: 50%;
+    height: 80%;
+    text-align: center;
+}*/
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    align-items: center;
+  }
+select {
+    text-align: center;
+    text-align-last: center;
+    /* webkit*/
+  }
+  option {
+    text-align: left;
+    /* reset to left*/
+  }
